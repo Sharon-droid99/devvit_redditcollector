@@ -1,27 +1,147 @@
-## Devvit React Starter
+# World Cup Reddit Collector
 
-A starter to build web applications on Reddit's developer platform
+## Overview
 
-- [Devvit](https://developers.reddit.com/): A way to build and deploy immersive games on Reddit
-- [Vite](https://vite.dev/): For compiling the webView
-- [React](https://react.dev/): For UI
-- [Hono](https://hono.dev/): For backend logic
-- [Tailwind](https://tailwindcss.com/): For styles
-- [TypeScript](https://www.typescriptlang.org/): For type safety
+This project is a Devvit-based Reddit collector developed as part of the MSc World Cup Intelligence and Sentiment Analysis project.
 
-## Getting Started
+The collector connects to Reddit, retrieves live posts and comments from football-related subreddits, and serves as the Reddit data acquisition component for the larger analytics system.
 
-> Make sure you have Node 22 downloaded on your machine before running!
+---
 
-1. Run `npm create devvit@latest --template=react`
-2. Go through the installation wizard. You will need to create a Reddit account and connect it to Reddit developers
-3. Copy the command on the success page into your terminal
+## Features
 
-## Commands
+* Live Reddit integration using Devvit
+* Fetch subreddit posts
+* Fetch post comments
+* Collect multiple comments from live discussions
+* Foundation for sentiment analysis pipelines
+* Can be integrated with n8n automation workflows
 
-- `npm run dev`: Starts a development server where you can develop your application live on Reddit.
-- `npm run build`: Builds your client and server projects
-- `npm run deploy`: Uploads a new version of your app
-- `npm run launch`: Publishes your app for review
-- `npm run login`: Logs your CLI into Reddit
-- `npm run type-check`: Type checks, lints, and prettifies your app
+---
+
+## Current Status
+
+Verified:
+
+* Reddit authentication through Devvit
+* Live subreddit access
+* Live post retrieval
+* Live comment retrieval
+* Collection of multiple comments from a post
+
+Example workflow:
+
+Reddit
+↓
+Subreddit
+↓
+Post
+↓
+Comments
+↓
+Sentiment Analysis Pipeline
+
+---
+
+## Installation
+
+### Prerequisites
+
+* Node.js
+* npm
+* Reddit account
+* Devvit CLI
+
+### Install Devvit CLI
+
+```bash
+npm install -g @devvit/cli
+```
+
+### Login
+
+```bash
+npx devvit login
+```
+
+### Verify Login
+
+```bash
+npx devvit whoami
+```
+
+---
+
+## Running the Project
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start playtest mode:
+
+```bash
+npm run dev
+```
+
+After deployment, Devvit will provide a playtest URL.
+
+Open the URL and refresh the page.
+
+---
+
+## Testing Comment Collection
+
+1. Open the generated playtest subreddit.
+2. Click:
+
+```
+...
+Create a new post
+```
+
+3. The application will:
+
+   * Fetch a live football-related Reddit post
+   * Fetch comments
+   * Print comments to the terminal
+
+---
+
+## Project Structure
+
+```text
+src/
+├── client/
+├── server/
+│   ├── core/
+│   │   └── post.ts
+│   └── routes/
+└── shared/
+```
+
+---
+
+## Team Integration
+
+This repository is intended to serve as the Reddit collection module for the larger World Cup Intelligence platform.
+
+Planned integration:
+
+Reddit Collector
+↓
+n8n Automation
+↓
+Sentiment Analysis API
+↓
+Database
+↓
+Dashboard
+
+---
+
+## Authors
+
+MSc World Cup Intelligence Project Team
