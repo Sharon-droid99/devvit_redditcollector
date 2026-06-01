@@ -142,6 +142,3 @@ Dashboard
 
 ---
 
-## Authors
-
-MSc World Cup Intelligence Project Team
