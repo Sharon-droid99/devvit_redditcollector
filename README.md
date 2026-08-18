@@ -1,10 +1,8 @@
-# World Cup Reddit Collector
+# Reddit Collector
 
 ## Overview
 
-This project is a Devvit-based Reddit collector developed as part of the MSc World Cup Intelligence and Sentiment Analysis project.
-
-The collector connects to Reddit, retrieves live posts and comments from football-related subreddits, and serves as the Reddit data acquisition component for the larger analytics system.
+This collector connects to Reddit, retrieves live posts and comments from football-related subreddits, and serves as the Reddit data acquisition component for the larger analytics system.
 
 ---
 
